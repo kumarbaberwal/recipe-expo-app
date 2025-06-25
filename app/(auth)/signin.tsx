@@ -38,11 +38,7 @@ export default function Signin() {
         console.error(JSON.stringify(signInAttempt, null, 2))
       }
     } catch (error) {
-      if (typeof error === 'object' && error !== null && 'errors' in error && Array.isArray((error as any).errors)) {
-        ToastAndroid.show((error as any).errors?.[0]?.message || "Sign in failed", ToastAndroid.SHORT)
-      } else {
-        ToastAndroid.show("Sign in failed", ToastAndroid.SHORT)
-      }
+      ToastAndroid.show(error instanceof Error ? error.message : "Sign in failed", ToastAndroid.SHORT)
       console.error(JSON.stringify(error, null, 2))
     } finally {
       setLoading(false)
