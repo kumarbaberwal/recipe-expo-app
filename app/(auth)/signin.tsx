@@ -51,11 +51,13 @@ export default function Signin() {
 
   return (
     <View style={authStyles.container}>
-      <KeyboardAvoidingView style={authStyles.keyboardView} behavior={Platform.OS === 'ios' ? "padding" : undefined}>
+      <KeyboardAvoidingView style={authStyles.keyboardView} behavior={Platform.OS === 'ios' ? "padding" : 'height'}>
         <ScrollView
           contentContainerStyle={authStyles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
+
+          {/* Image Container */}
           <View
             style={authStyles.imageContainer}
           >
