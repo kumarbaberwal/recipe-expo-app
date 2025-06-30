@@ -1,4 +1,4 @@
-import { homeStyles } from "@/assets/home.styles.ts";
+import { homeStyles } from "@/assets/styles/home.styles";
 import CategoryFilter from "@/components/CategoryFilter";
 import RecipeCard from '@/components/RecipeCard';
 import { colors } from "@/constants/colors";

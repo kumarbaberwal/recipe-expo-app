@@ -1,4 +1,4 @@
-import { homeStyles } from "@/assets/home.styles";
+import { homeStyles } from "@/assets/styles/home.styles";
 import { Image } from "expo-image";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 

@@ -1,4 +1,4 @@
-import { authStyles } from '@/assets/auth.styles'
+import { authStyles } from '@/assets/styles/auth.styles'
 import { colors } from '@/constants/colors'
 import { useSignIn } from '@clerk/clerk-expo'
 import { Ionicons } from '@expo/vector-icons'

@@ -1,4 +1,4 @@
-import { recipeCardStyles } from "@/assets/home.styles";
+import { recipeCardStyles } from "@/assets/styles/home.styles";
 import { colors } from "@/constants/colors";
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
