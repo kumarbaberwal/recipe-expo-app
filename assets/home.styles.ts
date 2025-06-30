@@ -1,5 +1,5 @@
-import { Dimensions, StyleSheet } from "react-native";
 import { colors } from "@/constants/colors";
+import { Dimensions, StyleSheet } from "react-native";
 
 const { width } = Dimensions.get("window");
 const cardWidth = (width - 48) / 2;
@@ -97,7 +97,7 @@ export const homeStyles = StyleSheet.create({
         fontWeight: "600",
     },
     recipesSection: {
-        paddingHorizontal: 20,
+        paddingHorizontal: 16,
         marginTop: 8,
     },
     sectionHeader: {
