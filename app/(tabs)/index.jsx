@@ -1,5 +1,6 @@
 import { homeStyles } from "@/assets/styles/home.styles";
 import CategoryFilter from "@/components/CategoryFilter";
+import LoadingSpinner from "@/components/LoadingSpinner";
 import RecipeCard from '@/components/RecipeCard';
 import { colors } from "@/constants/colors";
 import { MealAPI } from "@/services/mealAPI";
@@ -86,6 +87,8 @@ export default function Index() {
     setRefreshing(false)
   }
 
+  if (loading && !refreshing) return <LoadingSpinner message="Loading delicious recipes..." />
+
   return (
     <View style={homeStyles.container}>
       <ScrollView
@@ -130,7 +133,7 @@ export default function Index() {
             <TouchableOpacity
               style={homeStyles.featuredCard}
               activeOpacity={0.9}
-            // onPress={() => router.push(`/recipe/${featuredRecipe.id}`)}
+              onPress={() => router.push(`/recipe/${featuredRecipe.id}`)}
             >
               <View style={homeStyles.featuredImageContainer}>
                 <Image

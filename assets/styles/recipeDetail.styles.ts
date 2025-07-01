@@ -1,5 +1,5 @@
-import { Dimensions, StyleSheet } from "react-native";
 import { colors } from "@/constants/colors";
+import { Dimensions, StyleSheet } from "react-native";
 
 const { height } = Dimensions.get("window");
 
@@ -24,6 +24,8 @@ export const recipeDetailStyles = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
+        // top: 0,
+        // ...StyleSheet.absoluteFillObject,
         height: "60%",
     },
     floatingButtons: {
