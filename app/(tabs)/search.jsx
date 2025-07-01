@@ -1,4 +1,5 @@
 import { searchStyles } from '@/assets/styles/search.styles';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import RecipeCard from '@/components/RecipeCard';
 import { colors } from '@/constants/colors';
 import { useDebounce } from '@/hooks/useDebounce';
@@ -74,7 +75,7 @@ export default function Search() {
   }, [debouncedSearchQuery, initialLoading])
 
 
-  if (initialLoading) return (<Text>Loading...</Text>);
+  if (initialLoading) return (<LoadingSpinner message='Loading recipes...' />);
 
   return (
     <View style={searchStyles.container}>
@@ -122,7 +123,7 @@ export default function Search() {
         </View>
         {loading ? (
           <View style={searchStyles.loadingContainer}>
-            <Text>Loading...</Text>
+            <LoadingSpinner message='Searching recipes...' size='small' />
           </View>
         ) : (
           <FlatList
@@ -144,7 +145,7 @@ export default function Search() {
 function NoResultsFound() {
   return (
     <View style={searchStyles.emptyState}>
-      <Ionicons name="search-outline" size={64} color={COLORS.textLight} />
+      <Ionicons name="search-outline" size={64} color={colors.textLight} />
       <Text style={searchStyles.emptyTitle}>No recipes found</Text>
       <Text style={searchStyles.emptyDescription}>
         Try adjusting your search or try different keywords
